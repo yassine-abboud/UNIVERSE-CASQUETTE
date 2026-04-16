@@ -1,0 +1,216 @@
+html,body{
+height: 100%;
+width: 100%;  
+margin: 0;
+padding: 0;
+background-image: url(https://static.vecteezy.com/system/resources/thumbnails/056/513/884/small_2x/an-evocative-interior-scene-featuring-a-textured-wall-painted-in-a-vibrant-gradient-bathed-in-a-blend-of-light-and-shadow-and-a-floor-with-a-cool-hue-free-photo.jpg);
+font-family: 'Poppins', sans-serif;
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+}
+
+*{
+
+box-sizing: border-box;
+}
+
+.container {
+
+  min-height:500vh; /* غيرت height إلى min-height */
+ max-width: 1140px; 
+
+  width: 92%; 
+  margin: 0 auto 0 auto; /* بدل top/left */
+  border-radius: 20px;
+  color: #fff;
+  border: 2px solid #fff;
+  background-color: rgba(0,0,0,0.5);
+display: grid;
+  grid-template-columns: repeat(1, 1fr);
+
+
+
+}
+#btn {
+  width: 80px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: #fff;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  margin: 20px auto;
+  z-index: 0;
+  position: relative;
+  overflow: hidden; /* باش ميتجاوزش before الحدود */
+}
+
+#btn::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background: linear-gradient(45deg, #ff0000, #600174, #001aff, #ff00dd);
+  z-index: -1;
+  background-size: 600%;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  filter: blur(8px);
+  animation: gradientMove 6s linear infinite;
+  border-radius: 12px;
+}
+
+#btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.4);
+  transform: skewX(-25deg);
+  animation: shine 2s infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes shine {
+  0% { left: -75%; }
+  50% { left: 125%; }
+  100% { left: 125%; }
+}
+
+.box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  background: linear-gradient(45deg, #f13939, #6b0179, #5868f5, #ff00dd);
+  background-size: 600%;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  box-shadow: 0 0 15px rgba(255, 0, 150, 0.6),
+              0 0 30px rgba(255, 0, 150, 0.4),
+              0 0 45px rgba(255, 0, 150, 0.2);
+  transition: transform 0.1s ease-out;
+    animation: gradientMove 6s linear infinite;
+
+}
+
+
+.title{
+height: 30vw;
+  width: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+.lobster-regular{
+
+text-align: center;
+
+  font-size: 4.5rem;
+   font-family: 'TranscendsGamesMedium';
+  font-weight: 800;
+  font-style: normal;
+  
+}
+.p2{
+margin-left: 200px;
+}
+
+
+
+
+
+#box1{
+background-color: red;
+width: 70px;
+height: 70px;
+border-radius: 10px;
+
+margin: 20px auto;}
+#box2{
+background-color: green;
+width: 70px;
+height: 70px;
+border-radius: 10px;
+margin: 20px auto;
+}
+#box3{
+background-color: blue;
+width: 70px;
+height: 70px;
+border-radius: 10px;
+margin: 20px auto;
+}
+
+.pic{
+position: relative;
+width: 100%;
+height: 75vh;
+overflow: hidden;
+
+}
+.pic img{
+width: 100%;
+height:150%;
+position: absolute;
+cursor: pointer;
+}
+
+#smooth-wrapper {
+overflow: hidden;
+
+  width: 100%;
+  height: 100%;
+}
+
+#smooth-content {
+
+  height:100%;
+  width: 100%;
+    position: relative;
+}
+.con-gall{
+  margin-top: 70px;
+height:200vh;
+width: 100%;
+background-color: #f13939;
+display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap:0px;
+
+}
+.gg{
+width: 100%;
+height: 40vh;
+background-color: aqua;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.d-img{
+width:30vw;
+height: 40vh;
+position: absolute;
+background-color: #001aff;
+overflow: hidden;
+}
+
+.gallery{
+width: 150%;
+height: 100%;
+position: relative;
+transform-origin:"left";
+transform:scaleX(0.8);
+}
+
+

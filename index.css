@@ -1,0 +1,102 @@
+/* Removed Sass variable, use the linear-gradient directly in background-image */
+
+/* Use the linear-gradient directly in background-image properties */
+* {
+  box-sizing: border-box;
+  user-select: none;
+}
+
+a {
+  color: var(--color-surface-white);
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: black;
+  text-transform: uppercase;
+  color: white;
+}
+
+h2 {
+  font-size: clamp(1rem, 8vw, 10rem);
+  font-weight: 600;
+  text-align: center;
+  margin-right: -0.5em;
+  width: 90vw;
+  max-width: 1200px;
+  text-transform: none;
+}
+
+header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  width: 100%;
+  z-index: 3;
+  height: 7em;
+  font-size: clamp(0.66rem, 2vw, 1rem);
+  letter-spacing: 0.5em;
+}
+.titre{
+color:black;
+font-size: 2em;
+
+
+}
+section {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  position: fixed;
+  visibility: hidden;
+}
+section .outer,
+section .inner {
+  width: 100%;
+  height: 100%;
+  overflow-y: hidden;
+}
+section .bg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  background-size: cover;
+  background-position: center;
+}
+section .bg h2 {
+  z-index: 999;
+}
+section .bg .clip-text {
+  overflow: hidden;
+}
+
+.first .bg {
+  background-image:
+  url("https://verygoodlord.com/wp-content/uploads/2022/02/meilleures-marques-de-casquette-pour-homme-1536x1025.jpg");
+}
+.second .bg {
+  background-image:
+  url("https://images.pexels.com/photos/1124465/pexels-photo-1124465.jpeg?cs=srgb&dl=pexels-amanjakhar-1124465.jpg&fm=jpg");
+}
+.third .bg {
+  background-image:
+  url("https://images.footballfanatics.com/jordan-brand/mens-jordan-brand-olive-zion-bucket-hat_pi4168000_altimages_ff_4168917-163bddb49fd0337add58alt2_full.jpg?_hv=2&w=900");
+}
+.fourth .bg {
+  background-image: 
+  url("https://www.macadambasket.com/49768-home_default/bob-jordan-apex.jpg");
+}
+.fifth .bg {
+  background-image:
+  url("https://assets.codepen.io/16327/site-landscape-8.jpg");
+  background-position: 50% 45%;
+}
